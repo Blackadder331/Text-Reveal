@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;700&display=swap');
+
+* { 
+    box-sizing: border-box; 
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body { 
+    margin: 0; 
+    padding: 0; 
+    font-size: 15px; 
+    /* ^ 15px rem base number for type scaling*/
+    background-color: #121212;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+h1, h2, h3, h4, h5 {
+    line-height: 1.1;
+}
+
+
+h2 {
+    font-size: 2rem;
+    line-height: 1.25;
+    width: 60ch;
+}
+
+
+body,
+input,
+button,
+select,
+textarea {
+    font: 600 1rem 'Poppins'; 
+    color: #81dcdc}
+
+a { text-decoration: none; }
+a:link { color: #81dcdc; }
+a:hover { color: #81dcdc; }
+a:active { color: #81dcdc; }
+a:visited { color: #81dcdc; }
+
+html, body, #root { height: 100%; }
+
+ul, ol { margin: 0 0 1rem; padding: 0 0 0 1rem; }
+
+table { border-collapse: collapse; }
+th { text-align: left; border-bottom: 1px solid white; }
+td { vertical-align: middle; }
+
+table:not(th){
+    font-weight: 200;
+}
+
+/* END RESETS */
+
+section {
+    padding: 4rem 10rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    gap: 8rem;
+    width: 100%;
+}
+
+.corp {
+    min-width: 32rem;
+}
+
+.button-col{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+button {
+    outline: 1px solid #81dcdc;
+    background-color: transparent;
+    border: none;
+    padding: 1rem 3rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    transition: .3s ease;
+    cursor: pointer;
+}
+
+button:hover{
+    opacity: .8;
+    background-color: #81dcdc;
+    color: #121212;
+    transition: .3s ease;
+    /* scale: 1.05; */
+}
+
+button:hover a {
+    color: #121212;
+}
+
+
+.fade-in {
+    animation: fadeIn ease 2;
+    -webkit-animation: fadeIn ease 2s;
+    -moz-animation: fadeIn ease 2s;
+    -o-animation: fadeIn ease 2s;
+    -ms-animation: fadeIn ease 2s;
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity:0;
+      transform: translateY(3rem);
+    }
+    100% {
+      opacity:1;
+      transform: translateY(0rem);
+    }
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-o-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+  }
+}
+
+/* Flashing cursor removed not working */
+
+/* .flash {
+    padding: 0 50px 0 10px;
+  }
+  
+.flash {
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+}
+  
+@keyframes cursor-blink {
+    0% {
+      opacity: 0;
+    }
+}
+  
+.flash::after {
+    content: "";
+    width: 5px;
+    height: 30px;
+    background: #ec7fff;
+    animation: cursor-blink 1s steps(2) infinite;
+} */
+
+
+
+
+
+@media screen and (max-width: 1200px) {
+    section {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+
+    .button-col{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+    }
+}
